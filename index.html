@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloura - Style. Tech. Beauty. Everything in One Place.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <img class="loader-logo" src="images/logo.jpeg" alt="Veloura Logo">
+            <div class="loader-circle"></div>
+            <p>VELUORA</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img class="nav-logo-img" src="images/logo.jpeg" alt="Veloura Logo">
+                <span>Veloura</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#offers" class="nav-link">Offers</a>
+                <a href="#trending" class="nav-link">New Arrivals</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+            </div>
+
+            <div class="nav-search">
+                <input type="text" placeholder="Search products..." id="searchInput" class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-icons">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-icon" id="wishlistIcon" title="Wishlist">
+                    <i class="far fa-heart"></i>
+                    <span class="icon-badge">0</span>
+                </button>
+                <button class="nav-icon" id="cartIcon" title="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="icon-badge" id="cartCount">0</span>
+                </button>
+                <button class="nav-icon profile-icon" title="Profile">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="hero-content">
+                    <h1 class="hero-title">Summer Collection 2026</h1>
+                    <p class="hero-subtitle">Discover the latest trends in fashion and technology</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Shop Now</button>
+                        <button class="btn btn-secondary">Explore Collections</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <img src="images/Summer collection 2026.jpeg" alt="Summer Collection 2026">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="hero-content">
+                    <h1 class="hero-title">Flash Sale - 50% Off</h1>
+                    <p class="hero-subtitle">Limited time offer on premium products</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary scroll-to" data-target="flash-sale">View Deals</button>
+                        <button class="btn btn-secondary scroll-to" data-target="offers">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-slide" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <div class="hero-content">
+                    <h1 class="hero-title">Tech Gadgets</h1>
+                    <p class="hero-subtitle">Latest smartphones, watches, and earbuds</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Explore Tech</button>
+                        <button class="btn btn-secondary">Browse Now</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <img src="images/Tech Gadgets.jpeg" alt="Tech Gadgets">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+        </div>
+
+        <button class="hero-nav-btn prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-nav-btn next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Featured Brands Section -->
+    <section class="featured-brands">
+        <h2>Featured Brands</h2>
+        <div class="brands-grid">
+            <div class="brand-item">Nike</div>
+            <div class="brand-item">Adidas</div>
+            <div class="brand-item">Apple</div>
+            <div class="brand-item">Samsung</div>
+            <div class="brand-item">Zara</div>
+            <div class="brand-item">H&M</div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="section-header">
+            <h2>Shop by Category</h2>
+            <p>Explore our diverse collection of premium products</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card" data-category="clothing">
+                <div class="category-image">
+                    <img src="images/Premium Cotton T-Shirt.jpeg" alt="Clothing">
+                </div>
+                <div class="category-icon"><i class="fas fa-shirt"></i></div>
+                <h3>Clothing</h3>
+                <p>5000+ Products</p>
+            </div>
+            <div class="category-card" data-category="beauty">
+                <div class="category-image">
+                    <img src="images/Hydrating Face Serum.jpeg" alt="Beauty">
+                </div>
+                <div class="category-icon"><i class="fas fa-spa"></i></div>
+                <h3>Beauty</h3>
+                <p>2500+ Products</p>
+            </div>
+            <div class="category-card" data-category="food">
+                <div class="category-image">
+                    <img src="images/Fresh Fruit Juice.jpeg" alt="Food & Beverages">
+                </div>
+                <div class="category-icon"><i class="fas fa-apple-alt"></i></div>
+                <h3>Food & Beverages</h3>
+                <p>3000+ Products</p>
+            </div>
+            <div class="category-card" data-category="electronics">
+                <div class="category-image">
+                    <img src="images/Tech Gadgets.jpeg" alt="Electronics">
+                </div>
+                <div class="category-icon"><i class="fas fa-laptop"></i></div>
+                <h3>Electronics</h3>
+                <p>1800+ Products</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter and Sort Bar -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="categoryFilter">Category:</label>
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="food">Food & Beverages</option>
+                    <option value="electronics">Electronics</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="priceRange">Price Range:</label>
+                <input type="range" id="priceRange" min="0" max="50000" value="50000">
+                <span class="price-display">₹0 - ₹<span id="priceValue">50000</span></span>
+            </div>
+
+            <div class="filter-group">
+                <label for="ratingFilter">Min Rating:</label>
+                <select id="ratingFilter">
+                    <option value="">All Ratings</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="3">3+ Stars</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sortBy">Sort By:</label>
+                <select id="sortBy">
+                    <option value="latest">Latest</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Highest Rated</option>
+                </select>
+            </div>
+
+            <button class="btn btn-secondary" id="resetFilters">Reset Filters</button>
+        </div>
+    </section>
+
+    <!-- Trending Products Section -->
+    <section class="trending" id="trending">
+        <div class="section-header">
+            <h2>Trending Now</h2>
+            <p>Most loved products by our customers</p>
+        </div>
+        <div class="products-grid" id="trendingProducts"></div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers">
+        <div class="section-header">
+            <h2>Best Sellers</h2>
+            <p>Top-rated products that customers love</p>
+        </div>
+        <div class="products-grid" id="bestSellerProducts"></div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="flash-sale">
+        <div class="sale-banner">
+            <h2><i class="fas fa-bolt"></i> Flash Sale</h2>
+            <div class="countdown" id="countdown">
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+        <div class="products-grid" id="flashSaleProducts"></div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers" id="offers">
+        <div class="section-header">
+            <h2>Special Offers</h2>
+            <p>Exclusive deals for you</p>
+        </div>
+        <div class="offers-grid">
+            <div class="offer-card">
+                <div class="offer-badge">Buy 1 Get 1</div>
+                <h3>Fashion Collection</h3>
+                <p>On selected items</p>
+                <button class="btn btn-primary btn-sm">Shop Now</button>
+            </div>
+            <div class="offer-card">
+                <div class="offer-badge">50% Off</div>
+                <h3>Electronics</h3>
+                <p>Limited time only</p>
+                <button class="btn btn-primary btn-sm">Explore</button>
+            </div>
+            <div class="offer-card">
+                <div class="offer-badge">Free Shipping</div>
+                <h3>Orders Above ₹999</h3>
+                <p>On all products</p>
+                <button class="btn btn-primary btn-sm">Learn More</button>
+            </div>
+            <div class="offer-card">
+                <div class="offer-badge">Extra 20%</div>
+                <h3>First Order</h3>
+                <p>Use code: WELCOME20</p>
+                <button class="btn btn-primary btn-sm">Claim Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="testimonials" id="reviews">
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get exclusive deals, new arrivals, and style tips directly to your inbox</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" id="newsletterEmail">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Veloura</h4>
+                <p>Your one-stop destination for style, tech, and beauty products. Premium quality, affordable prices, and exceptional service.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#trending">New Arrivals</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> support@veloura.com</p>
+                <p><i class="fas fa-phone"></i> +1 (800) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Style Street, Fashion City, FC 12345</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Veloura. All rights reserved. | Designed with <i class="fas fa-heart"></i> for style lovers</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Wishlist Modal -->
+    <div class="wishlist-modal" id="wishlistModal">
+        <div class="wishlist-header">
+            <h3>My Wishlist</h3>
+            <button class="close-wishlist" id="closeWishlist"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="wishlist-items" id="wishlistItems">
+            <p class="empty-wishlist">Your wishlist is empty</p>
+        </div>
+    </div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Product">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalName"></h2>
+                    <div class="modal-rating">
+                        <div class="stars" id="modalStars"></div>
+                        <span id="modalReviewCount"></span>
+                    </div>
+                    <div class="modal-price">
+                        <span class="current-price" id="modalPrice"></span>
+                        <span class="original-price" id="modalOriginalPrice"></span>
+                        <span class="discount-badge" id="modalDiscount"></span>
+                    </div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    
+                    <div class="size-selector">
+                        <label>Select Size:</label>
+                        <div class="sizes">
+                            <button class="size-btn" data-size="XS">XS</button>
+                            <button class="size-btn" data-size="S">S</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="L">L</button>
+                            <button class="size-btn" data-size="XL">XL</button>
+                            <button class="size-btn" data-size="XXL">XXL</button>
+                        </div>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="quantity-controls">
+                            <button id="decreaseQty"><i class="fas fa-minus"></i></button>
+                            <input type="number" id="modalQuantity" value="1" min="1" max="10">
+                            <button id="increaseQty"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="addToCartModal">Add to Cart</button>
+                        <button class="btn btn-secondary" id="addToWishlistModal">
+                            <i class="far fa-heart"></i> Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
