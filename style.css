@@ -846,7 +846,7 @@ section:nth-child(even) {
     margin-bottom: 40px;
 }
 
-..category-card {
+.category-card {
     background: linear-gradient(135deg, var(--light-bg-secondary), white);
     padding: 40px;
     border-radius: var(--border-radius);
@@ -1263,7 +1263,6 @@ body.dark-mode .size-option {
     font-weight: 600;
     transition: all var(--transition-fast);
     font-size: 14px;
-}
 }
 
 body.dark-mode .quick-view-btn {
